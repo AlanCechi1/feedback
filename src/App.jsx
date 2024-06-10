@@ -6,24 +6,20 @@ import { Home } from "./pages/Home"
 
 import { theme } from "./styles/theme.js"
 
+import { GlobalStyle } from "./styles/global.js"
+
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Home />
+    element: <Home/>
   }
-
-
 ])
 
 export function App() {
   return (
-    <div>
-
-      <ThemeProvider theme={theme}>
+    <ThemeProvider theme={theme}>
       <RouterProvider router={router} />
-      </ThemeProvider>
-
-
-    </div>
+      <GlobalStyle/>
+    </ThemeProvider>
   )
 }
